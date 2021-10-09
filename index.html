@@ -1,0 +1,40 @@
+<html>
+    <title>
+        ML APP
+    </title>
+    <body>
+        <form action = "{{url_for('predict')}}" method='post'>
+            <label>Item Weight: </label>
+            <input type = "text" name = "item_weight" /><br>
+            <div><br></div>
+
+            <label>Item Visibility: </label>
+            <input type = "text" name = "item_visibility" /><br>
+            <div><br></div>
+
+            <label>Item MRP: </label>
+            <input type = "text" name = "item_mrp" /><br>
+            <div><br></div>
+
+            <label>Outlet Establishment year: </label>
+            <select name="outlet_establishment_year" id="outlet_establishment_year">
+            <option value="1999">1999</option>  
+            <option value="2000">2000</option>
+            <option value="2003">2003</option>
+            <option value="2006">2006</option>
+            <option value="2009">2009</option>
+            </select>
+            
+            <div><br></div>
+            <button type = "submit">Predict</button>
+
+        </form>
+
+        {{ prediction }}
+
+
+    </body>
+
+
+</html>
+
